@@ -1,0 +1,16 @@
+{
+  "name": "serverless-dynamodb-streams",
+  "version": "0.1.0",
+  "description": "Serverless service to showcase DynamoDB stream support",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.6.7"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
+}

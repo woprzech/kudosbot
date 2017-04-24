@@ -1,0 +1,31 @@
+service: my-service
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+  iamRoleStatements:
+    - Effect: "Allow"
+      Resource: "*"
+      Action:
+        - "dynamodb:*"
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+        - http:
+            path: hello
+            method: get
+  updateProfile:
+    handler: handler.updateProfile
+    events:
+      - http:
+          path: putuj
+          method: put
+
+  slackNotify:
+    handler: handler.slackNotify
+    events:
+      - http:
+          path: slack
+          method: post
